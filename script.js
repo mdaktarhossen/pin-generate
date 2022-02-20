@@ -17,6 +17,7 @@ document.getElementById("generate-pin").addEventListener("click", ()=>{
   generatePin();
 });
 
+// calculatore
 document.getElementById("cal-number").addEventListener("click", (event)=>{
   const typedNumber= event.target.innerText;
   const calInpute=document.getElementById("cal-inpute");
@@ -28,3 +29,15 @@ document.getElementById("cal-number").addEventListener("click", (event)=>{
     calInpute.value=updatedValue+typedNumber;
   }
 });
+
+// submited btn;
+document.getElementById("submit-btn").addEventListener("click", ()=>{
+  const setedNumber=document.getElementById("cal-inpute").value;
+  const generatedNumber=document.getElementById("pin-input").value;
+  if(generatedNumber==setedNumber){
+    document.getElementById("matched").style.display="block"
+  }
+  else{
+    document.getElementById("warning").style.display="block"
+  }
+})

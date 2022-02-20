@@ -16,3 +16,15 @@ document.getElementById("generate-pin").addEventListener("click", ()=>{
   }
   generatePin();
 });
+
+document.getElementById("cal-number").addEventListener("click", (event)=>{
+  const typedNumber= event.target.innerText;
+  const calInpute=document.getElementById("cal-inpute");
+  if(isNaN(typedNumber)){
+    calInpute.value=""
+  }
+  else{
+    const updatedValue= calInpute.value;
+    calInpute.value=updatedValue+typedNumber;
+  }
+});
